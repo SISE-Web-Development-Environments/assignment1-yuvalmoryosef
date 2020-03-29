@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" href="emojionearea.min.css">
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script src="emojionearea.min.js"></script>
+
 </head>
 <body>
 <div id="menu">
@@ -13,166 +21,161 @@
 <li><a href="#spa">Q&A</a></li>
 <li><a href="#contact">Contact Me</a></li>
 </div>
+
+
 		  
 <section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
+
+<h1>About me</h1>
+
+<article>
+Hello, my name is Yuval Mor Yosef, I'm 26 years old and originally from Rishon Lezion. I am a second year student in the
+Information Systems Engeneering department in Ben Gurion University. 
+My hobbies are Learning about the world,cooking, watching series and playing and being with my friends. 
+My expectation from this course are very high and Iwant to learn many intresting things and don't work too much about exhausting css files.
+</article>
+
+
 </section>
 
 <section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
+
+<h1>My photos</h1>
+
+<div class="images_buttons">
+		<a
+		style="background-image:url(image/newz.jpg)" 
+		alt="New Zealand">
+		<span>New Zealand</span>
+		</a>
+		
+		<a
+		style="background-image:url(image/newz.jpg)"
+		alt="New Zealand">
+		<span>Boston Crib</span>
+		</a>
+		
+		<a
+		style="background-image:url(image/newz.jpg)"
+		alt="New Zealand">
+		<span>Boston Crib</span>
+		</a>
+		
+		<a
+		style="background-image:url(image/newz.jpg)"
+		alt="New Zealand">
+		<span>Boston Crib</span>
+		</a>
+		
+		<a
+		style="background-image:url(image/newz.jpg)"
+		alt="New Zealand">
+		<span>Boston Crib</span>
+		</a>
+		
+		<a
+		style="background-image:url(image/newz.jpg)"
+		alt="New Zealand">
+		<span>Boston Crib</span>
+		</a>
+
+</div>
+
+
 </section>
 
 <section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
+<h1>My playlist</h1>
+
+
+
+<div class="youtube_buttons">
+            
+<iframe class="yt-iframe" src="https://www.youtube.com/embed/Plle_j6pV-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+		</div>
+
+
 </section>
 
 <section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+
+
+
+<h1>Give me a like</h1>
+
+
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fupsidedown.co.il%2F&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+
 </section>
 
 <section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
+
+
+
+<h1>Scan my code</h1>
+
 </section>
 
 <section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
+
+<h1>Answers</h1>
+
+
+
 </section>
 
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
+
+
+<h1>Contact me</h1>
+
+<form action="mailto:moryuval@post.bgu.ac.il" method="post" enctype="text/plain" align="center">
+<form id="reused_form">
+<div class="form-group">
+<label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+<input type="text" name="name" class="form-control" placeholder="Enter Name">
+</div>
+<div class="form-group">
+<label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+<input type="email" name="email" class="form-control" placeholder="Enter Email">
+</div>
+<div class="form-group">
+<label><i class="fa fa-comment" aria-hidden="true"></i> Message</label>
+<textarea id="Emoji" rows="3" name="message" class="form-control" placeholder="Type Your Message "></textarea>
+
+
+</div>
+<div class="form-group">
+<button class="btn btn-raised btn-block btn-danger">Post →</button>
+<input type="reset" value="reset">
+</div>
+</form>
+<div id="error_message" style="width:100%; height:100%; display:none; ">
+<h4>Error</h4>
+Sorry there was an error sending your form.
+</div>
+<div id="success_message" style="width:100%; height:100%; display:none; ">
+<h2>Success! Your Message was Sent Successfully.</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<a href="mailto:moryuval@post.bgu.ac.il" 
+runtime_url="mailto:moryuval@post.bgu.ac.il" style="">
+<font style="color: rgb(255, 255, 255);">
+</font></a></span></div></div></div> 
+
+</form>
+<!-- Form Ended -->
+
+
+
+
 </section>
 
 
@@ -189,5 +192,17 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+     <script type="text/javascript">
+        $(document).ready(function() {
+            $('.youtube_buttons a').magnificPopup({type: 'iframe', preloader: false, fixedContentPos: false});
+        })
+    </script>
+	
+	<script>
+		$(document).ready(function () {
+			$("#Emoji").emojioneArea({
+			});
+		})
+	</script>
 </body>
 </html>

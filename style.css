@@ -4,21 +4,14 @@ body {
 	line-height: 1.5em;
 	font-family: Arial;
 	font-size: 20px;
-	background: pink;
-	//background-repeat: no-repeat;
-    //background-attachment: fixed; 
-	//background-size:cover;
+	background-image: linear-gradient(0deg, 	#f1b3be	, 	#ffe7ed	);
 }
 
 
 
 #logo {
-	left: 31%;
-    position: relative;
-	width: 40%;
-    height: 100%;
-    //border: 1px solid green;
-	display: inline-block;
+	width: 100%;
+    height: 2em;
 	z-index: 10;
 	animation-name: breath;
   animation-duration: 3s;
@@ -26,10 +19,9 @@ body {
 }
 
 .logo_frame{
-	//border: 2px solid yellow;
-	 height: 7%;
-	 width: 100%;
-	 position: fixed;
+	 width: 33%;
+	 left:33%;
+	 position: relative;
 	 z-index: 12;
 }
 
@@ -46,10 +38,10 @@ body {
 /*black border*/
 #menu
 {
-	padding: 1.5em 14px;
+	padding: 0.5em 0px;
 	position: fixed;
 	width: 100%;
-	background-color: black;
+	background-image: linear-gradient(180deg, 	#000000	, 	#444444	);
 	text-align:center;
 	z-index: 10;
 }
@@ -59,13 +51,12 @@ body {
 /*designe units*/ 
 #menu li{
 	padding: 0 14px;
-	margin: 1px -4px;
+	margin: 1px -3px;
 	display: inline-block;
 	border-right: 1px solid #ffffff;
-	border-left: 1px solid #ffffff;
-	background-color: #222222;		
+	border-left: 1px solid #ffffff;		
 	position:relative;
-	bottom:-1.1em;
+	bottom:-0.3em;
 	
 }
 
@@ -77,11 +68,7 @@ body {
 	text-align: center;
 	text-decoration: none;
 	color: white;	
-	
 	vertical-align:text-bottom;
-	//position:absolute;
-    //bottom:0;
-
 }
 
 /*hover on text*/ 
@@ -109,7 +96,7 @@ h2{
 .images_buttons {display: flex;  flex-wrap: wrap;
  justify-content: center; padding-bottom: 10px}
 .images_buttons a {height: 150px; width: 150px;border-radius: 50%;background-size: cover;border: 3px solid #fff; margin: 25px 15px;position: relative}
-.images_buttons span {margin-top: 105%;display: block;text-align:center; color: #fff;background-color: pink;font-weight: bold;}
+.images_buttons span {margin-top: 105%;display: block;text-align:center; color: #fff;font-weight: bold;}
 .images_buttons a:hover {transform: scale(1.5); z-index: 2;}
 
 /*section*/

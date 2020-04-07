@@ -2,20 +2,48 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5em;
-	font-family: Arial;
+	font-family: Century Gothic;
 	font-size: 20px;
-	background-image: linear-gradient(0deg, 	#f1b3be	, 	#ffe7ed	);
+	color:white;
 }
 
+#backg {
+  height:100%;
+  width:100%;
+  background:linear-gradient(180deg,#9b111e, #e0115f);
+  z-index:0;
+  position: relative;
+  overflow:hidden;
+}
 
+#backg::after {
+	content:'';
+  top:0;
+	transform:translateX(100%);
+	width:100%;
+	height:100%;
+	position: absolute;
+	z-index:-1;
+	animation: slide 15s linear infinite 1s;
+	background: radial-gradient(
+		rgba(255,255,255,0) 45%,
+		rgba(66,22,11,0.1) 50%,
+		rgba(255,255,255,0) 65%);
+}
+
+@keyframes slide {
+	0% {transform:translateY(-100%);}
+    50% {transform:translateY(-100%);}
+	100% {transform:translateY(100%);}
+}
 
 #logo {
 	width: 100%;
     height: 2em;
 	z-index: 10;
 	animation-name: breath;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 .logo_frame{
@@ -25,83 +53,153 @@ body {
 	 z-index: 12;
 }
 
+#ruby_frame{
+	 position: absolute;
+	 right:-1em;
+	 bottom:0.5em;
+	 width:1em;
+	 height:1em;
+	background-image:url("image/ruby.png");
+	background-size: cover;
+	overflow:hidden;
+	opacity:0.7;
+}
+
+#ruby_frame::after {
+	opacity:0;
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:44;
+	animation: glare 8s linear infinite 3s;
+    background-image: radial-gradient( white 5%, rgba(0,0,0,0) 70%);
+}
+
+@keyframes glare {
+	0% {opacity:0;transform:translateX(-50%)}
+  20% {opacity:1;transform: scale(1.0);}
+	40% {opacity:0;transform:translate(50%,-50%);}
+}
+
 @keyframes breath {
   0%   {transform: scale(1.0)}
-  5%  {transform: scale(1.03)}
-  10%  {transform: scale(1.0)}
-  15%  {transform: scale(1.03)}
+  5%  {transform: scale(1.02)}
+  10%  {transform: scale(1)}
+  15%  {transform: scale(1.02)}
   40%  {transform: scale(1.0)}
   100% {transform: scale(1.0)}
 }
 
-
-/*black border*/
 #menu
 {
 	padding: 0.5em 0px;
 	position: fixed;
 	width: 100%;
-	background-image: linear-gradient(180deg, 	#000000	, 	#444444	);
+	background-image: linear-gradient(180deg, 		#710446 15%,#42160b 50%);
 	text-align:center;
 	z-index: 10;
 }
 
-
-
 /*designe units*/ 
 #menu li{
-	padding: 0 14px;
-	margin: 1px -3px;
+	padding: 0 ;
+	margin: 0 -3px;
 	display: inline-block;
-	border-right: 1px solid #ffffff;
-	border-left: 1px solid #ffffff;		
+	border-right: 1px solid #d83b4c;
+	border-left: 1px solid #d83b4c;		
 	position:relative;
 	bottom:-0.3em;
-	
 }
 
 /*designe text*/ 
 #menu li a {
-	padding: 0px 10px;
-	margin: 0;
+	position:relative;
+	padding: 2px 1em;
+	height:150%;
 	font-size: 20px;
-	text-align: center;
 	text-decoration: none;
 	color: white;	
-	vertical-align:text-bottom;
 }
 
 /*hover on text*/ 
 #menu li a:hover, #menu li .current {
-	color: pink;
+	text-shadow: 0px 2px 4px black;
 }
+
 #menu li:hover, #menu li .current {
-	//color: green;
-	background-color: #333333;
+	background-color: #710446;
 }
 
 h1{
 	text-align:left;	
 	font-size:200%;
 }
+
 h2{
 	text-align:right;
 	font-size:150%;
 	
 }
 
+h3{
+	text-align:center;
+	font-size:80%;
+	
+}
 
-
-
-.images_buttons {display: flex;  flex-wrap: wrap;
- justify-content: center; padding-bottom: 10px}
-.images_buttons a {height: 150px; width: 150px;border-radius: 50%;background-size: cover;border: 3px solid #fff; margin: 25px 15px;position: relative}
-.images_buttons span {margin-top: 105%;display: block;text-align:center; color: #fff;font-weight: bold;}
-.images_buttons a:hover {transform: scale(1.5); z-index: 2;}
-
+.images_buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 10px;
+	z-index:3;
+	}
+.images_buttons a {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	background-size: cover;
+	border: 3px solid #fff;
+	margin: 25px 15px;
+	position: relative;
+	 background-repeat: no-repeat;
+	}
+	 
+.images_buttons span {
+	margin-top: 105%;
+	display: block;
+	text-align:center;
+	color: #fff;
+	font-weight: bold;
+	}
+	
+.images_buttons a:hover {
+	transform: scale(1.2);
+	z-index: 2;
+	cursor:pointer;
+	}
+.images_buttons a:hover span {
+	text-shadow:0 0 3px black,0 0 4px black, 0 0 5px black,0 0 12px white,0 0 12px white;
+	}
+	
+.images_buttons a:active {
+	transform: scale(2);
+	z-index: 8;
+	border-radius: 10%;
+	border: 15px solid rgba(0,0,0,0.9);
+	position:absolute;
+	box-shadow:0 0 20px 20px rgba(0,0,0,0.9);
+	}
+.images_buttons a:active span{
+	text-shadow:0 0 1px white;
+	}
 /*section*/
 .section{
-	padding: 4em 50px;
+	//top:150px;
+	padding: 4em 50px 0px;
 	//border: 1px solid yellow;
 }
 
